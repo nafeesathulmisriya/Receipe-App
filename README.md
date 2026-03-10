@@ -41,14 +41,14 @@ Version Control: Git & GitHub
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](recipes/static/screenshots/home.png)
 
 ### Recipe List
-![Recipe List](screenshots/recipe_list.png)
+![Recipe List](recipes/static/screenshots/recipe_list.png)
 
-### Recipe Detail
-![Recipe Detail](screenshots/recipe_detail.png)
+### Recipe Details
+![Recipe Details](recipes/static/screenshots/recipe_detail.png)
 
-### Admin Panel
-![Admin Panel](screenshots/admin_panel.png)
+### Category Page
+![Category](recipes/static/screenshots/category.png)
 
