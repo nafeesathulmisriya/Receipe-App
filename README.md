@@ -37,3 +37,17 @@ Framework: Django
 Frontend: HTML, CSS, Bootstrap
 Database: SQLite
 Version Control: Git & GitHub
+
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Recipe List
+![Recipe List](screenshots/recipe_list.png)
+
+### Recipe Detail
+![Recipe Detail](screenshots/recipe_detail.png)
+
+### Admin Panel
+![Admin Panel](screenshots/admin_panel.png)
