@@ -44,11 +44,23 @@ Version Control: Git & GitHub
 ![Home Page](recipes/static/screenshots/home.png)
 
 ### Recipe List
-![Recipe List](recipes/static/screenshots/recipe_list.png)
+![Recipe List](recipes/static/screenshots/receipes.png)
 
-### Recipe Details
-![Recipe Details](recipes/static/screenshots/recipe_detail.png)
+### Add Recipe
+![Add Recipe](recipes/static/screenshots/add_recp.png)
 
-### Category Page
-![Category](recipes/static/screenshots/category.png)
+### Recipe Categories
+![Recipe Categories](recipes/static/screenshots/recpi_categories.png)
+
+### Recipe Description
+![Recipe Description](recipes/static/screenshots/recpi_description.png)
+
+### Search Recipe
+![Search Recipe](recipes/static/screenshots/search_receipe.png)
+
+### Login Page
+![Login](recipes/static/screenshots/login.png)
+
+### Signup Page
+![Signup](recipes/static/screenshots/signup.png)
 
