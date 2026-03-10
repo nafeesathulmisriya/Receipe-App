@@ -51,3 +51,4 @@ Version Control: Git & GitHub
 
 ### Admin Panel
 ![Admin Panel](screenshots/admin_panel.png)
+
