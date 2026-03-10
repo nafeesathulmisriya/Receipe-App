@@ -1,0 +1,125 @@
+{% extends 'recipes/base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} | Recipes{% endblock %}
+
+{% block extra_css %}
+<style>
+
+/* HIDE HOME BANNER / SLIDER */
+.slider_area,
+.hero-area,
+.banner-area {
+    display: none !important;
+}
+
+/* PAGE SPACING */
+.home-wrapper {
+    padding: 2rem 0;
+}
+
+/* CARD */
+.recipe-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE SIZE FIX */
+.recipe-img {
+    height: 160px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.recipe-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BODY */
+.recipe-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.recipe-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.recipe-category {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.recipe-time {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+.view-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #d62828;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container home-wrapper">
+
+    <h3 class="text-center mb-4">{{ category.name }}</h3>
+
+    <div class="row g-4 justify-content-center">
+
+        {% for recipe in recipes %}
+        <div class="col-lg-3 col-md-4 col-sm-6">
+
+            <div class="recipe-card">
+
+                <div class="recipe-img">
+                    {% if recipe.image %}
+                        <img src="{{ recipe.image.url }}" alt="{{ recipe.title }}">
+                    {% else %}
+                        <img src="{% static 'recipes/img/default_recipe.jpg' %}">
+                    {% endif %}
+                </div>
+
+                <div class="recipe-body">
+                    <div class="recipe-title">{{ recipe.title }}</div>
+                    <div class="recipe-category">{{ category.name }}</div>
+                    <div class="recipe-time">{{ recipe.cooking_time }} min</div>
+
+                    <a href="{% url 'recipes:recipe_detail' recipe.id %}" class="view-link">
+                        View Recipe →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        {% empty %}
+        <div class="col-12 text-center text-muted">
+            No recipes found in this category
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

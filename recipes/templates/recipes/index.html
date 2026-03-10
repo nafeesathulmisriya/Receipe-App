@@ -1,0 +1,165 @@
+{% extends 'recipes/base.html' %}
+{% load static %}
+
+{% block title %}Home | Tasty Recipes{% endblock %}
+
+{% block content %}
+
+<!-- ================= SLIDER ================= -->
+<div class="slider_area">
+    <div class="single_slider d-flex align-items-center slider_bg_1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="slider_text text-center">
+                        <h3>Chicken dish with per boiled egg</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= RECIPES ================= -->
+<div class="recepie_area">
+    <div class="container">
+        <div class="row">
+
+            <!-- RECIPE 1 -->
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_recepie text-center">
+                    <div class="recepie_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_1.png' %}" alt="">
+                    </div>
+                    <h3>Vegetable Bowl</h3>
+                    <span>Appetizer</span>
+                    <p>Time Needs: 30 Mins</p>
+                   
+                </div>
+            </div>
+
+            <!-- RECIPE 2 -->
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_recepie text-center">
+                    <div class="recepie_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_2.png' %}" alt="">
+                    </div>
+                    <h3>Vegetable Bowl</h3>
+                    <span>Appetizer</span>
+                    <p>Time Needs: 30 Mins</p>
+                    
+                </div>
+            </div>
+
+            <!-- RECIPE 3 -->
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single_recepie text-center">
+                    <div class="recepie_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_3.png' %}" alt="">
+                    </div>
+                    <h3>Egg Masala Ramen</h3>
+                    <span>Appetizer</span>
+                    <p>Time Needs: 30 Mins</p>
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= RECIPE VIDEO ================= -->
+<div class="recipe_video_area">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-6">
+                <div class="recipe_video_text">
+                    <h3>
+                        Recipe videos <br>
+                        that never misses <br>
+                        any portion
+                    </h3>
+                    <p>
+                        "Welcome back to the kitchen"—today we’re breaking down a crowd favorite 
+                        that is surprisingly simple to make from scratch.
+                        
+                    </p>
+                    <a href="#" class="boxed-btn3">
+                        <i class="fa fa-play"></i> Watch Video
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGES -->
+            <div class="col-lg-6">
+                <div class="recipe_video_thumb">
+                    <img src="{% static 'recipes/img/video/big.png' %}" class="img1" alt="">
+                    <img src="{% static 'recipes/img/video/small_1.png' %}" class="img2" alt="">
+                    <img src="{% static 'recipes/img/video/sm2.png' %}" class="img3" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= SERVICE AREA ================= -->
+<div class="service_area">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <!-- SERVICE 1 -->
+            <div class="col-xl-4 col-md-6">
+                <div class="single_service text-center">
+                    <div class="service_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_6.png' %}" alt="">
+                    </div>
+                    <h3>Birthday Catering</h3>
+                    <p>
+                        From intimate gatherings to grand celebrations, we create 
+                        delicious memories that will make your special day even sweeter. 
+                        Custom menus, themed decorations, and professional service 
+                        tailored just for you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SERVICE 2 -->
+            <div class="col-xl-4 col-md-6">
+                <div class="single_service text-center">
+                    <div class="service_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_5.png' %}" alt="">
+                    </div>
+                    <h3>Event Catering</h3>
+                    <p>
+                    From intimate gatherings to grand celebrations, we craft unforgettable 
+                    culinary experiences that delight your guests and make every moment special. 
+                    Our expert chefs use only the freshest ingredients to create masterpieces 
+                    that taste as amazing as they look.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SERVICE 3 -->
+            <div class="col-xl-4 col-md-6">
+                <div class="single_service text-center">
+                    <div class="service_thumb">
+                        <img src="{% static 'recipes/img/recepie/recpie_4.png' %}" alt="">
+                    </div>
+                    <h3>Party Orders</h3>
+                    <p>
+                        From intimate gatherings to grand celebrations, 
+                        we bring restaurant-quality dishes to your doorstep.Our party order feature is designed to bridge 
+                        the gap between casual home cooking and professional event catering
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ================= END SERVICE AREA ================= -->
+
+{% endblock %}

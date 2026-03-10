@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup | Tasty Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'recipes/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'recipes/css/style.css' %}">
+
+    <style>
+        body {
+            background: url("{% static 'recipes/img/banner/back.jpg' %}") no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        .signup-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .signup-card h3 {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .signup-card p {
+            color: #777;
+        }
+
+        .signup-card input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .signup-card button {
+            width: 100%;
+            background: #ff4a52;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .signup-card button:hover {
+            background: #e63e45;
+        }
+
+        .signup-card a {
+            color: #ff4a52;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="col-md-5">
+
+            <div class="signup-card text-center">
+                <img src="{% static 'recipes/img/logo.png' %}" alt="Logo" width="120" class="mb-3">
+
+                <h3>Create Account</h3>
+                <p>Join Tasty Recipes & discover delicious dishes 🍽️</p>
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <input type="text" name="username" placeholder="Username" required>
+
+                    <input type="password" name="password" placeholder="Password" required>
+
+                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+
+                <p class="mt-3">
+                    Already have an account?
+                    <a href="{% url 'recipes:login' %}">Login</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
